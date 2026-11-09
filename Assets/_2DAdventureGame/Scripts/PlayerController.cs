@@ -74,7 +74,11 @@ public InputAction TalkAction;
         {
             if (TalkAction.WasPressedThisFrame())
             {
-                Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+                            if (TalkAction.WasPressedThisFrame())
+            {
+                UIHandler.instance.DisplayDialog();
+            }
+
             }
         }
 

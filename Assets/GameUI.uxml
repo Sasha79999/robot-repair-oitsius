@@ -5,7 +5,7 @@
     <ui:VisualElement name="HealthBarContainer" style="flex-grow: 1; position: absolute; width: 147px; height: 39px; top: 38px; left: 176px;">
         <ui:VisualElement name="HealthBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ducko/UI/UIHealthBar.png?fileID=21300000&amp;guid=39fe000f2b6d9d04b93d6a76310e29aa&amp;type=3#UIHealthBar&quot;); width: 100%;"/>
     </ui:VisualElement>
-    <ui:VisualElement name="DialogWindow" style="flex-grow: 1; position: absolute; width: 111px; height: 61px; top: 311px; left: 742px; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Tutorial_Demo/Demo_Art/Common/Dialogue%20Box.png?fileID=8422053880202019330&amp;guid=395098334d58842a69967402df4defd9&amp;type=3#dialogiebox_0&quot;);">
-        <ui:Label text="" name="DialogText" style="height: 56px;"/>
+    <ui:VisualElement name="DialogWindow" style="flex-grow: 1; position: absolute; width: 111px; height: 61px; top: 39px; left: 358px; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Tutorial_Demo/Demo_Art/Common/Dialogue%20Box.png?fileID=8422053880202019330&amp;guid=395098334d58842a69967402df4defd9&amp;type=3#dialogiebox_0&quot;);">
+        <ui:Label text="" name="DialogText" style="height: 28px; width: 112px;"/>
     </ui:VisualElement>
 </ui:UXML>
