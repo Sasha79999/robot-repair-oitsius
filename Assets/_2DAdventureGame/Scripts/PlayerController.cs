@@ -23,7 +23,9 @@ public class PlayerController : MonoBehaviour
     public InputAction LaunchAction;
         public float launchCooldown = 0.5f;
     float launchTimer;
-    public UIHandler uiHandler;
+
+public InputAction TalkAction;
+
 
 
     void Start()
@@ -33,7 +35,8 @@ public class PlayerController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
-    }
+        TalkAction.Enable();
+}
 
     void Update()
     {
@@ -90,11 +93,9 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
-        
-    if (uiHandler != null)
-{
-    uiHandler.SetHealthValue((float)currentHealth / maxHealth);
-}
+
+           UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
+
 
     }
 
