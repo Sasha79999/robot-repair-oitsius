@@ -6069,6 +6069,41 @@ PrefabInstance:
       propertyPath: uiHandler
       value: 
       objectReference: {fileID: 567547473}
+    - target: {fileID: 872258071638992052, guid: da1bd5476634f8f448e47cd92410e2d0,
+        type: 3}
+      propertyPath: TalkAction.m_Name
+      value: Talk
+      objectReference: {fileID: 0}
+    - target: {fileID: 872258071638992052, guid: da1bd5476634f8f448e47cd92410e2d0,
+        type: 3}
+      propertyPath: TalkAction.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 872258071638992052, guid: da1bd5476634f8f448e47cd92410e2d0,
+        type: 3}
+      propertyPath: TalkAction.m_ExpectedControlType
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 872258071638992052, guid: da1bd5476634f8f448e47cd92410e2d0,
+        type: 3}
+      propertyPath: TalkAction.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 872258071638992052, guid: da1bd5476634f8f448e47cd92410e2d0,
+        type: 3}
+      propertyPath: TalkAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: d1a6b953-bfaf-4b9d-8a73-0adf4dd75ec0
+      objectReference: {fileID: 0}
+    - target: {fileID: 872258071638992052, guid: da1bd5476634f8f448e47cd92410e2d0,
+        type: 3}
+      propertyPath: TalkAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/x
+      objectReference: {fileID: 0}
+    - target: {fileID: 872258071638992052, guid: da1bd5476634f8f448e47cd92410e2d0,
+        type: 3}
+      propertyPath: TalkAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Talk
+      objectReference: {fileID: 0}
     - target: {fileID: 4077675372395462193, guid: da1bd5476634f8f448e47cd92410e2d0,
         type: 3}
       propertyPath: m_Name
