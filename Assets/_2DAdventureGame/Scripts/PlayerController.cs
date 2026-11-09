@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public InputAction LaunchAction;
         public float launchCooldown = 0.5f;
     float launchTimer;
+    public UIHandler uiHandler;
+
 
     void Start()
     {
@@ -88,6 +90,12 @@ public class PlayerController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+        
+    if (uiHandler != null)
+{
+    uiHandler.SetHealthValue((float)currentHealth / maxHealth);
+}
+
     }
 
     void Launch()
