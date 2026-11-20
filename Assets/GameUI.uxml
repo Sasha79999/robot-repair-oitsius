@@ -1,11 +1,13 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="EndScreen" src="project://database/Assets/EndScreen.uxml?fileID=9197481963319205126&amp;guid=56eca4958e7ab7a4ebe4bc580a628d23&amp;type=3#EndScreen"/>
     <ui:VisualElement name="HealthBarBackground" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ducko/UI/UIHealthFrame.png?fileID=21300000&amp;guid=b47cdbd2062c5e64ba5a0bf3f6b045b1&amp;type=3#UIHealthFrame&quot;); width: 400px; height: 120px; -unity-background-scale-mode: scale-to-fit;">
         <ui:VisualElement name="CharacterPortrait" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ducko/UI/CharacterPortrait.png?fileID=21300000&amp;guid=0332b35b8fe3cf8458eb0558889493d1&amp;type=3#CharacterPortrait&quot;); position: absolute; width: 80px; height: 92px; top: 11px; left: 82px;"/>
     </ui:VisualElement>
     <ui:VisualElement name="HealthBarContainer" style="flex-grow: 1; position: absolute; width: 147px; height: 39px; top: 38px; left: 176px;">
         <ui:VisualElement name="HealthBar" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ducko/UI/UIHealthBar.png?fileID=21300000&amp;guid=39fe000f2b6d9d04b93d6a76310e29aa&amp;type=3#UIHealthBar&quot;); width: 100%;"/>
     </ui:VisualElement>
-    <ui:VisualElement name="DialogWindow" style="flex-grow: 1; position: absolute; width: 111px; height: 61px; top: 39px; left: 358px; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Tutorial_Demo/Demo_Art/Common/Dialogue%20Box.png?fileID=8422053880202019330&amp;guid=395098334d58842a69967402df4defd9&amp;type=3#dialogiebox_0&quot;);">
-        <ui:Label text="" name="DialogText" style="height: 28px; width: 112px;"/>
+    <ui:VisualElement name="DialogWindow" style="flex-grow: 1; position: absolute; width: 800px; height: 210px; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ducko/UI/UIDialogueBox.png?fileID=21300000&amp;guid=924827a9385ec3544b572966c8853b0a&amp;type=3#UIDialogueBox&quot;); padding-top: 25px; padding-right: 25px; padding-bottom: 25px; padding-left: 25px; font-size: 40px; top: 25px; left: 420px;">
+        <ui:Label text="Тисни C, щоб стріляти шестернями, &#10; і допоможи полагодити&#10; зламаних роботів!&#10;" name="DialogText" style="height: 28px; width: 112px;"/>
     </ui:VisualElement>
+    <ui:Instance template="EndScreen" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0;"/>
 </ui:UXML>
