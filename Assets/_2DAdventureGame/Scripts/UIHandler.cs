@@ -11,6 +11,8 @@ public class UIHandler : MonoBehaviour
     private VisualElement m_WinScreen;
     private VisualElement m_LoseScreen;
 
+    private Label m_WaterLabel;
+
     private void Awake()
     {
         instance = this;
@@ -27,6 +29,8 @@ public class UIHandler : MonoBehaviour
 
         m_LoseScreen = uiDocument.rootVisualElement.Q<VisualElement>("LoseScreenContainer");
         m_WinScreen = uiDocument.rootVisualElement.Q<VisualElement>("WinScreenContainer");
+
+        m_WaterLabel = uiDocument.rootVisualElement.Q<Label>("WaterLabel");
 
         SetHealthValue(1.0f);
     }
@@ -46,6 +50,11 @@ public class UIHandler : MonoBehaviour
     public void SetHealthValue(float percentage)
     {
         m_Healthbar.style.width = Length.Percent(100 * percentage);
+    }
+
+    public void SetWaterValue(int percent)
+    {
+        m_WaterLabel.text = "Вода: " + percent + "%";
     }
 
     public void DisplayDialog()

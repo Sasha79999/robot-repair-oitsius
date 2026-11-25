@@ -9,5 +9,6 @@
     <ui:VisualElement name="DialogWindow" style="flex-grow: 1; position: absolute; width: 800px; height: 210px; background-image: url(&quot;project://database/Assets/_2DAdventureGame/Art/Ducko/UI/UIDialogueBox.png?fileID=21300000&amp;guid=924827a9385ec3544b572966c8853b0a&amp;type=3#UIDialogueBox&quot;); padding-top: 25px; padding-right: 25px; padding-bottom: 25px; padding-left: 25px; font-size: 40px; top: 25px; left: 420px;">
         <ui:Label text="Тисни C, щоб стріляти шестернями, &#10; і допоможи полагодити&#10; зламаних роботів!&#10;" name="DialogText" style="height: 28px; width: 112px;"/>
     </ui:VisualElement>
+    <ui:Label text="Вода: 0%" name="WaterLabel" parse-escape-sequences="true" style="position: absolute; top: 140px; left: 40px; font-size: 32px; color: rgb(255, 255, 255); -unity-font-definition: resource(&quot;FlatSkin/Font/Roboto-MediumItalic&quot;); -unity-text-outline-width: 1px;"/>
     <ui:Instance template="EndScreen" style="position: absolute; top: 0; right: 0; left: 0; bottom: 0;"/>
 </ui:UXML>
