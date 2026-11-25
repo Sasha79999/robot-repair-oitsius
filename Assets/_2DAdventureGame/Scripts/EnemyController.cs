@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     int direction = 1;
     bool broken = true;
         public bool isBroken { get { return broken; } }
+            public AudioClip fixedClip;
 
     void Start()
     {
@@ -71,5 +72,6 @@ public class EnemyController : MonoBehaviour
         broken = false;
         rigidbody2d.simulated = false;
         animator.SetTrigger("Fixed");
-    }
+        AudioSource.PlayClipAtPoint(fixedClip, Camera.main.transform.position);
+    } 
 }

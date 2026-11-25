@@ -183,6 +183,7 @@ MonoBehaviour:
   speed: 1
   vertical: 1
   changeTime: 3
+  fixedClip: {fileID: 8300000, guid: 4e356d8e36201c14da953082c4d569ab, type: 3}
 --- !u!95 &2487559012856815781
 Animator:
   serializedVersion: 7

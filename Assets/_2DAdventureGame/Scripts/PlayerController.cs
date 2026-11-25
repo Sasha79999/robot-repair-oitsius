@@ -21,22 +21,24 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
     public InputAction LaunchAction;
-        public float launchCooldown = 0.5f;
+    public float launchCooldown = 0.5f;
     float launchTimer;
 
-public InputAction TalkAction;
+    public InputAction TalkAction;
 
-
+    AudioSource audioSource;
+    public AudioClip hitClip;
 
     void Start()
     {
         MoveAction.Enable();
         LaunchAction.Enable();
+        TalkAction.Enable();
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         currentHealth = maxHealth;
-        TalkAction.Enable();
-}
+    }
 
     void Update()
     {
@@ -62,27 +64,22 @@ public InputAction TalkAction;
             }
         }
 
-                launchTimer -= Time.deltaTime;
+        launchTimer -= Time.deltaTime;
 
         if (LaunchAction.WasPressedThisFrame() && launchTimer <= 0)
         {
             Launch();
             launchTimer = launchCooldown;
         }
-                RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, moveDirection, 1.5f, LayerMask.GetMask("NPC"));
+
+        RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, moveDirection, 1.5f, LayerMask.GetMask("NPC"));
         if (hit.collider != null)
         {
             if (TalkAction.WasPressedThisFrame())
             {
-                            if (TalkAction.WasPressedThisFrame())
-            {
                 UIHandler.instance.DisplayDialog();
             }
-
-            }
         }
-
-                
     }
 
     void FixedUpdate()
@@ -103,14 +100,16 @@ public InputAction TalkAction;
             isInvincible = true;
             damageCooldown = timeInvincible;
             animator.SetTrigger("Hit");
+            PlaySound(hitClip);
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
-        Debug.Log(currentHealth + "/" + maxHealth);
+        UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
+    }
 
-           UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
-
-
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 
     void Launch()
